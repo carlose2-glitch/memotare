@@ -1,0 +1,27 @@
+:root{
+    --w: calc(70vw/4);/*ancho de las tarjetas*/
+   /* --h: calc(80%/4);alto de las tarjetas*/
+}
+header{
+    display: flex;
+    width: 100%;
+    height: 33vh;
+}
+header .escuela{
+    height: 33vh;
+}
+
+header .pesebre{
+    height: 33vh;
+}
+main{
+    height: 180vh;
+}
+
+main .tablero{
+    width: 71.5%;
+    height: 80%;
+}
+.tarjeta{
+    width: var(--w);
+}

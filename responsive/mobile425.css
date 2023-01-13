@@ -1,0 +1,131 @@
+:root{
+    --w: calc(100vw/5);
+    --h: calc(100vh/5)
+}
+
+.intro{
+    display: flex;
+    justify-content: center;
+}
+.boton-sombra{
+    width: 100px;
+    height: 50px;
+}
+.boton-sombra .boton{
+    width: 100px;
+    height: 40px;
+}
+.modal .intro img{
+    width: 90%;
+}
+.boton-sombra .boton p {
+    font-weight: bold;
+    color: white;
+    font-size: 12px;
+}
+header{
+    display: inline-block;
+    width: 100%;
+    height: 67vh;
+}
+header .escuela {
+    height: 18vh;
+    width: 100vw;
+}
+
+header .pesebre{
+    width: 100%;
+    height: 53.5vh;
+}
+
+header .escuela img{
+    width: 30;
+}
+.pesebre p{
+    font-size: 18px;
+}
+main{
+    height: 90vh;
+    display: flex;
+    align-items: flex-start;
+}
+main .tablero{
+    top: 37px;
+    position: relative;
+    width: 83%;
+    
+}
+.con_la .iconos_laterales{
+    display: none;
+}
+.footer_425{
+    width: 100%;
+    height: 230px;
+    display: inline-block;
+}
+.footer_425 .compartir{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 7px;
+    border: solid 1px #cccccc;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    padding: 15px 0px;
+}
+.footer_425 .compartir p{
+    color: #728b8c;
+    margin-right: 5px;
+    font-size: 18px;
+}
+.footer_425 .compartir img{
+    padding-right: 5px;
+}
+.card_right .parte_inferior .med .b-medio{
+    top: 120px;
+}
+.card_right .adornos_superiores p{
+    left: 18px;
+}
+.contenedor_cards{
+    height: 74vh;
+}
+.didactica{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+.tarjeta{
+    width: var(--w);
+}
+
+.didactica p{
+    text-align: center;
+    line-height: 25px;
+    font-family: 'Source Sans Pro';
+    font-weight: 400;
+}
+.didactica p img{
+   width: 46%;
+   position: relative;
+   top: 14px;
+}
+
+footer{
+    height: 50px;
+}
+footer .base .left{
+    display: none;
+}
+
+footer .base .left p{
+    display: none;
+}
+footer .base .left img{
+    display: none;
+}
+footer .base .right .pe{
+    padding-right: 130px;
+}

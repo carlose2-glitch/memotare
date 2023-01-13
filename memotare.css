@@ -1,0 +1,476 @@
+@font-face{ /*tipografia*/
+    font-family: Arlon;
+    src: url('./fonts/ArlonSemiBold-DEMO.otf');
+}
+
+:root{
+    --w: calc(40vw/3);/*ancho de las tarjetas*/
+   /* --h: calc(80%/4);alto de las tarjetas*/
+}
+*{
+    margin: 0;
+    padding: 0;
+    transition: all 1s;
+}
+body{
+    overflow: hidden;
+}
+/*estilos para la primera tarjeta modal*/
+.modal{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+}
+.modal .intro img{
+    width: 40vw;
+}
+.boton-sombra{
+    cursor:pointer;
+    background: #d77c0e;
+    width: 15vw;
+    height: 8vh;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boton-sombra .boton{
+    background: #ed921f;
+    width: 15vw;
+    border-radius: 20px;
+    display: flex;
+    height: 6vh;
+    position: relative;
+    top: -7px;
+    justify-content: center;
+    align-items: center;
+}
+.boton-sombra .boton p{
+    font-weight: bold;
+    color: white;
+    font-size: 28px;
+}
+/*estilos tarjeta modal 2*/
+.modal_cards{
+    
+    position: fixed;
+    z-index: 3;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+.contenedor_cards{
+    display: flex;
+    width: 70%;
+    height: 61.5vh;
+    border: 8px solid #ffc042;
+    border-radius: 15px;
+    position: relative;
+    background: #E6CE76;
+
+}
+.contenedor_cards .card_left{
+    position: relative;
+    width: 60%;
+}
+.contenedor_cards .card_left .pesebre{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 7px 0px 0px 7px;
+}
+.contenedor_cards .card_left .jose{
+    position: absolute;
+    left: 4.8%;
+    top: 22.6%;
+    width: 16.3%;
+    height: 62.8%;
+}
+.contenedor_cards .card_left .maria{
+    position: absolute;
+    left: 1.4%;
+    top: 44.4%;
+    width: 26.6%;
+    height: 56%;
+}
+.contenedor_cards .card_left .gaspar{
+    position: absolute;
+    left: 40%;
+    top: 14.8%;
+    width: 19%;
+    height: 65.5%;
+}
+.contenedor_cards .card_left .pastor{
+    position:absolute;
+    left: 69.3%;
+    top: 20%;
+    width: 18.7%;
+    height: 67%;
+}
+.contenedor_cards .card_left .baltazar{
+    position: absolute;
+    left: 25.3%;
+    top: 13.3%;
+    width: 17.7%;
+    height: 60%;
+}
+.contenedor_cards .card_left .melchor{
+    position: absolute;
+    left: 46.5%;
+    top: 39.3%;
+    width: 30%;
+    height: 51.2%;
+    
+}
+.contenedor_cards .card_left .mostrar{/*esta clase solo va a estar siendo usada cuando el usuario adivine el para de p*/
+    animation: muneco 1s .5s both ease, slideOutDown 1s ease 1.5s 1 normal forwards;
+    transform-origin: top center;
+}
+.contenedor_cards .card_left .jesus{
+    position: absolute;
+    left: 25.4%;
+    top: 68.2%;
+    width: 21.5%;
+    height: 28.8%;
+}
+.contenedor_cards .card_left .mula{
+    position: absolute;
+    left:80%;
+    top: 40%;
+    width: 20%;
+    height: 60.2%;
+}
+
+
+
+.contenedor_cards .card_right{
+    background-image: url('./imagenes/estrellas.png');
+    width: 40%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+.card_right .adornos_superiores{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.card_right .adornos_superiores .cinta{
+    width: 20%;
+    height: 20%;
+    margin-top: 1%;
+    margin-left: 5%;
+}
+.card_right .adornos_superiores p{
+    margin-top: 20%;
+    margin-left: 28%;
+    font-family: Arlon, sans-serif;
+    color:#bc3d2e;
+    font-size: 31px;
+    position: absolute;
+}
+.card_right .adornos_superiores .bola{
+    width: 30%;
+    height: 30%;
+}
+.card_right .medio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    width: 100%;
+    height: 40%;
+}
+.card_right .medio p{
+    display: inline-block;
+    text-align: center;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 22px;
+}
+.card_right .parte_inferior{
+    display: flex;
+    width: 100%;
+    height: 33%;
+}
+.card_right .parte_inferior .iz{
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+    width: 20%;
+}
+.card_right .parte_inferior .iz img{
+    width: 50%;
+    animation: rotar 2s infinite;
+}
+.card_right .parte_inferior .med{
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.card_right .parte_inferior .med .b-medio{/*boton desactivar*/
+    cursor: pointer;
+    width: 50%;
+    height: 35%;
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: #d77c0e;
+}
+.card_right .parte_inferior .med .b-medio .b-fondo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+    border-radius: 20px;
+    align-items: center;
+    margin-bottom: 8px;
+    background-color: #ED921F;
+}
+.card_right .parte_inferior .med .b-medio .b-fondo{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+}
+
+.card_right .parte_inferior .dr{
+    width: 20%;
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+
+    
+}
+.card_right .parte_inferior .dr img{
+    width: 50%;
+    animation: rotar 2s infinite;
+}
+
+
+/*cabecera*/
+header{
+    display: flex;
+    width: 100%;
+    height: 25vh;
+    
+}
+header .escuela{
+    width: 28%;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+header .escuela img{
+    width: 90%;
+}
+
+header .pesebre {
+    background-color: #e6f9f4;
+    width: 72%;
+    height: 25vh;
+}
+.pesebre h1{
+    font-size: 31px;
+    color: #5fa3a5;
+    font-family: Arlon, sans-serif;
+    padding-left: 24px;
+
+}
+.pesebre p{
+    padding-top: 10px;
+    padding-left: 24px;
+    padding-right: 40px;
+    font-family:'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    color: #161b1c;
+    line-height: 28px;
+}
+
+
+/*menu tarjetas*/
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./imagenes/estrellas-bg.png'), url('./imagenes/background.png');
+    width: 100%;
+    height: 150vh;
+    background-color: #F2D272;
+}
+main .tablero{
+    width: 55%;
+    height: 80%;
+    /* background-color: blue;  */
+    display: inline-block;
+    
+}
+
+.tarjeta{
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    width: var(--w);
+    /* height: var(--h); */
+
+}
+.card{
+    position: relative;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+}
+
+.card .front,
+.card .back{
+    width: 100%;
+    /* height: 100%; */
+    backface-visibility: hidden;
+}
+.card .back{
+    position: absolute;
+    top: 0px;
+    left: 0px; 
+    transform: rotateY(180deg);
+}
+
+ .con_la{
+    margin-left: 10px;
+    display: flex;
+    position: fixed;
+    top: 50%;
+
+}
+.con_la .iconos_laterales{
+    display: flex;
+    flex-direction: column;
+} 
+
+.footer_425{
+    display: none;
+}
+
+/*footer*/
+footer{
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    background-color: #e6f9f4;
+    
+}
+
+footer .base{
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer .base .left{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+footer .base .left p{
+    font-family:'Source Sans Pro', sans-serif;
+    display: inline-block;
+    color: #161b1c;
+}
+footer .base .left img{
+    padding-left: 5px;
+    padding-top: 7px;
+    width: 150px;
+}
+
+footer .base .right{
+    display: flex;
+    align-items: center;
+}
+footer .base .right .pa{
+    padding-right: 7px;
+    font-family:'Source Sans Pro', sans-serif;
+    color: #161b1c;
+
+}
+footer .base .right .contactanos{
+    
+    margin-right: 10px;
+    background-color: #79b5b5;
+    border-radius: 10px;
+    padding: 5px;
+}
+footer .base .right .contactanos p{
+    color: white ;
+}
+/*animacion de las imagenes cubiertas*/
+@keyframes muneco{
+    20% {
+        -webkit-transform: rotate3d(0, 0, 1, 15deg);
+        transform: rotate3d(0, 0, 1, 15deg);
+    }
+
+    40% {
+        -webkit-transform: rotate3d(0, 0, 1, -10deg);
+        transform: rotate3d(0, 0, 1, -10deg);
+    }
+
+    60% {
+        -webkit-transform: rotate3d(0, 0, 1, 5deg);
+        transform: rotate3d(0, 0, 1, 5deg);
+    }
+
+    80% {
+        -webkit-transform: rotate3d(0, 0, 1, -5deg);
+        transform: rotate3d(0, 0, 1, -5deg);
+    }
+
+    100% {
+        -webkit-transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+}
+
+@keyframes slideOutDown {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        visibility: hidden;
+        -webkit-transform: translateY(200%);
+        transform: translateY(200%);
+    }
+}
+
+@keyframes rotar{
+    25%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+
+}
+

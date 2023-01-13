@@ -1,0 +1,27 @@
+.pesebre p {
+    padding-left: 14px;
+    padding-right: 0px;
+}
+header .pesebre {
+    width: 100%;
+    height: 58vh;
+}
+footer .base .right .pe {
+    padding-right: 35px;
+}
+main {
+    height: 76vh;
+    display: flex;
+    align-items: flex-start;
+}
+
+.card_right .parte_inferior .med .b-medio {
+    position: absolute;
+    top: 0px;
+    width: 43%;
+    height: 60%;
+}
+.card_right .parte_inferior {
+    position: relative;
+    top: 51px;
+}

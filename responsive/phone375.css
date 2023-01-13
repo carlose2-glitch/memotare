@@ -1,0 +1,29 @@
+.pesebre h1{
+    padding-left: 14px;
+}
+.pesebre p {
+    padding-left: 1px;
+    padding-right: 0px;
+}
+
+main .tablero {
+    top: 59px;
+    position: relative;
+    width: 86%;
+}
+
+footer .base .right .pe {
+    padding-right: 90px;
+}
+.contenedor_cards {
+    height: 67vh;
+}
+.card_right .parte_inferior .med .b-medio {
+    position: absolute;
+    top: 145px;
+    width: 37%;
+    height: 24%;
+}
+.card_right .adornos_superiores p {
+    left: 8px;
+}
